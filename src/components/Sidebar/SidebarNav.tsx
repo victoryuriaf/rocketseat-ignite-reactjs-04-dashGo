@@ -12,12 +12,14 @@ export function SidebarNav() {
             <NavSection title="GERAL">
                 <NavLink
                     icon={RiDashboardLine}
+                    href="/dashboard"
                 >
                     Dashboard
                 </NavLink>
 
                 <NavLink
                     icon={RiContactsLine}
+                    href="/users"
                 >
                     Users
                 </NavLink>
@@ -26,12 +28,14 @@ export function SidebarNav() {
             <NavSection title="AUTOMAÇÃO">
                 <NavLink
                     icon={RiInputMethodLine}
+                    href="/forms"
                 >
                     Forms
                 </NavLink>
 
                 <NavLink
                     icon={RiGitMergeLine}
+                    href="/automation"
                 >
                     Automação
                 </NavLink>

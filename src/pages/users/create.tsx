@@ -1,4 +1,5 @@
 import { Box, Button, Divider, Flex, Heading, HStack, SimpleGrid, VStack } from "@chakra-ui/react";
+import Link from "next/link";
 import { Input } from "../../components/Form/Input";
 import { Header } from "../../components/Header";
 import { Sidebar } from "../../components/Sidebar";
@@ -21,7 +22,7 @@ export default function CreateUser() {
                     flex="1"
                     borderRadius={8}
                     bg="gray.800"
-                    p="8"
+                    p={["6", "8"]}
                 >
                     <Heading
                         size="lg"
@@ -29,7 +30,7 @@ export default function CreateUser() {
                     >
                         Create User
                     </Heading>
-                    
+
                     <Divider my="6" borderColor="gray.700" />
 
                     <VStack
@@ -37,7 +38,7 @@ export default function CreateUser() {
                     >
                         <SimpleGrid
                             minChildWidth="240px"
-                            spacing="8"
+                            spacing={["6", "8"]}
                             w="100%"
                         >
                             <Input name="name" label="Full name" />
@@ -46,7 +47,7 @@ export default function CreateUser() {
 
                         <SimpleGrid
                             minChildWidth="240px"
-                            spacing="8"
+                            spacing={["6", "8"]}
                             w="100%"
                         >
                             <Input name="password" type="password" label="Password" />
@@ -61,11 +62,14 @@ export default function CreateUser() {
                         <HStack
                             spacing="4"
                         >
-                            <Button
-                                colorScheme="whiteAlpha"
-                            >
-                                Cancel
-                            </Button>
+                            <Link href="/users" passHref>
+                                <Button
+                                    as="a"
+                                    colorScheme="whiteAlpha"
+                                >
+                                    Cancel
+                                </Button>
+                            </Link>
                             <Button
                                 colorScheme="pink"
                             >
